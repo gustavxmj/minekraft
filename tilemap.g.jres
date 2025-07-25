@@ -10,6 +10,12 @@
         "tilemapTile": true,
         "displayName": "myTile"
     },
+    "tile2": {
+        "data": "hwQQABAAAADu7u7u7u7u7ru7u7u7u7u77u7u7u7u7u67u7u7u7u7u+7u7u7u7u7uu7u7u7u7u7vu7u7u7u7u7ru7u7u7u7u77u7u7u7u7u67u7u7u7u7u+7u7u7u7u7uu7u7u7u7u7vu7u7u7u7u7ru7u7u7u7u77u7u7u7u7u67u7u7u7u7uw==",
+        "mimeType": "image/x-mkcd-f4",
+        "tilemapTile": true,
+        "displayName": "myTile0"
+    },
     "level1": {
         "id": "level1",
         "mimeType": "application/mkcd-tilemap",
@@ -18,7 +24,8 @@
             "myTiles.transparency16",
             "sprites.castle.tilePath2",
             "sprites.castle.tilePath5",
-            "myTiles.tile1"
+            "myTiles.tile1",
+            "myTiles.tile2"
         ],
         "displayName": "level1"
     },

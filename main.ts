@@ -1,3 +1,10 @@
+controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
+    tiles.setTileAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), assets.tile`myTile0`)
+})
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    stive.vy = -100
+})
+let stive: Sprite = null
 scene.setBackgroundImage(img`
     9999995555555555555555559999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
     9999995555555555555555559999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
@@ -121,7 +128,7 @@ scene.setBackgroundImage(img`
     9999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999999
     `)
 tiles.setCurrentTilemap(tilemap`level1`)
-let stive = sprites.create(img`
+stive = sprites.create(img`
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
     . . . . . . . . . . . . . . . . 
