@@ -1,9 +1,23 @@
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
-    tiles.setTileAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), assets.tile`myTile0`)
-    tiles.setWallAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), true)
+    if (controller.down.isPressed()) {
+        tiles.setTileAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Bottom), assets.tile`myTile0`)
+        tiles.setWallAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Bottom), true)
+    } else {
+        tiles.setTileAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), assets.tile`myTile0`)
+        tiles.setWallAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), true)
+    }
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     stive.vy = -100
+})
+controller.menu.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (controller.down.isPressed()) {
+        tiles.setTileAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Bottom), assets.tile`transparency16`)
+        tiles.setWallAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Bottom), false)
+    } else {
+        tiles.setTileAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), assets.tile`transparency16`)
+        tiles.setWallAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), false)
+    }
 })
 let stive: Sprite = null
 scene.setBackgroundImage(img`
@@ -150,4 +164,3 @@ stive = sprites.create(img`
 controller.moveSprite(stive)
 stive.setStayInScreen(true)
 scene.cameraFollowSprite(stive)
-stive.ay = 200
