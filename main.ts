@@ -1,22 +1,19 @@
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     if (controller.down.isPressed()) {
-        tiles.setTileAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Bottom), assets.tile`myTile0`)
-        tiles.setWallAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Bottom), true)
-    } else {
-        tiles.setTileAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), assets.tile`myTile0`)
-        tiles.setWallAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), true)
-    }
-})
-controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
-    stive.vy = -100
-})
-controller.menu.onEvent(ControllerButtonEvent.Pressed, function () {
-    if (controller.down.isPressed()) {
         tiles.setTileAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Bottom), assets.tile`transparency16`)
         tiles.setWallAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Bottom), false)
     } else {
         tiles.setTileAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), assets.tile`transparency16`)
         tiles.setWallAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), false)
+    }
+})
+controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
+    if (controller.down.isPressed()) {
+        tiles.setTileAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Bottom), assets.tile`myTile0`)
+        tiles.setWallAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Bottom), true)
+    } else {
+        tiles.setTileAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), assets.tile`myTile0`)
+        tiles.setWallAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), true)
     }
 })
 let stive: Sprite = null
