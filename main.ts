@@ -11,7 +11,13 @@ controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (controller.down.isPressed()) {
         tiles.setTileAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Bottom), assets.tile`myTile0`)
         tiles.setWallAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Bottom), true)
-    } else {
+    } else if (controller.up.isPressed()) {
+        tiles.setTileAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), assets.tile`myTile0`)
+        tiles.setWallAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), true)
+    } else if (controller.right.isPressed()) {
+        tiles.setTileAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), assets.tile`myTile0`)
+        tiles.setWallAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), true)
+    } else if (controller.right.isPressed()) {
         tiles.setTileAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), assets.tile`myTile0`)
         tiles.setWallAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), true)
     }
