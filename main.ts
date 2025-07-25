@@ -142,3 +142,4 @@ let stive = sprites.create(img`
 controller.moveSprite(stive)
 stive.setStayInScreen(true)
 scene.cameraFollowSprite(stive)
+stive.ay = 0
