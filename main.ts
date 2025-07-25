@@ -1,5 +1,6 @@
 controller.B.onEvent(ControllerButtonEvent.Pressed, function () {
     tiles.setTileAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), assets.tile`myTile0`)
+    tiles.setWallAt(stive.tilemapLocation().getNeighboringLocation(CollisionDirection.Right), true)
 })
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     stive.vy = -100
